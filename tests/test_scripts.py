@@ -121,7 +121,8 @@ class Alerts(unittest.TestCase):
         state = {"advance_sent": ["c"], "day_before_sent": [], "pending_notices": []}
         email, new = alerts.advance_email(events, state, TODAY)
         self.assertEqual([e["id"] for e in new], ["a"])
-        self.assertIn("1 new major event", email[0])
+        self.assertEqual(email[0], "New: A Oct 20")
+        self.assertIn("1 new big event", email[2])
 
     def test_advance_nothing_new(self):
         state = {"advance_sent": ["a"], "day_before_sent": [], "pending_notices": []}
@@ -132,17 +133,26 @@ class Alerts(unittest.TestCase):
             {"type": "cancelled", "id": "b", "title": "B", "date": "2026-10-26", "source": "https://x"}]}
         email, _ = alerts.advance_email([], state, TODAY)
         self.assertIn("CANCELLED: B", email[1])
+        self.assertIn("CANCELLED", email[2])
 
     def test_day_before_lists_end_and_window(self):
         events = [ev("a", "2026-10-18", end="23:00", end_verified=True), ev("b", "2026-10-18"),
                   ev("c", "2026-10-19")]
-        t, (subject, body) = alerts.day_before_email(events, TODAY)
+        t, (subject, body, html) = alerts.day_before_email(events, TODAY)
         self.assertEqual(t, "2026-10-18")
-        self.assertIn("2 events", subject)
-        self.assertIn("Official end: 11:00 PM (official)", body)
-        self.assertIn("Official end: Not published", body)
-        self.assertIn("Pickup window: 10:15–11:45 PM (rough planning estimate)", body)
-        self.assertNotIn("C\n", body)
+        self.assertEqual(subject, "Tomorrow Sun Oct 18: 2 events · A, B")
+        self.assertIn("Ends 11 PM (official)", body)
+        self.assertIn("Ends: not published", body)
+        self.assertIn("PICKUP 10:15–11:45 PM (estimate)", body)
+        self.assertNotIn("\nC — ", body)
+        self.assertIn("waze.com/ul?q=601%20Biscayne%20Blvd", html)
+
+    def test_day_before_single_subject(self):
+        _, (subject, _, _) = alerts.day_before_email([ev("tini", "2026-10-18", title="TINI · Tour")], TODAY)
+        self.assertEqual(subject, "Tomorrow: TINI · pickup 10:15–11:45 PM")
+
+    def test_html_escapes(self):
+        self.assertIn("&lt;b&gt;", alerts.html_card(ev("a", "2026-10-18", title="<b>")))
 
     def test_day_before_none(self):
         self.assertEqual(alerts.day_before_email([], TODAY), ("2026-10-18", None))
