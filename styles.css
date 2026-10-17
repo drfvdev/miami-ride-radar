@@ -67,8 +67,9 @@ h1,h2,h3,p{margin:0}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:16px;letter-spacing:-.01em}
 .brand-mark{width:28px;height:28px}
 .brand-mark rect{fill:var(--text)}
-.brand-mark circle{fill:var(--accent)}
-.brand-mark path{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round}
+.brand-mark .s{fill:none;stroke:var(--accent);stroke-width:2.2;stroke-opacity:.55}
+.brand-mark .sw{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round}
+.brand-mark .f{fill:var(--accent)}
 .brand-name span{color:var(--muted);font-weight:500}
 .tabs{display:none}
 .tools{display:flex;gap:4px}

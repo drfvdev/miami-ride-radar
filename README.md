@@ -84,6 +84,7 @@ Static site served from the root of `main` through GitHub Pages. No build step.
 - `styles.css`: mobile-first layout, light and dark themes
 - `app.js`: rendering, filters, calendar, live status, detail sheet
 - `events.json`: event data
-- `manifest.webmanifest`, `icon.svg`: home-screen app icon
+- `manifest.webmanifest`, `icon.svg`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png`: home-screen app icons
+- `og-image.png`: 1200×630 link-preview image for WhatsApp, iMessage and social apps (tags in `index.html`)
 
 All times are Miami local time.
