@@ -1,25 +1,33 @@
 # Miami Ride Radar
 
-Mobile-friendly calendar for Miami-area events that could create rideshare pickup opportunities for Uber and Lyft drivers.
+A phone-first calendar of Miami-Dade events and potential rideshare pickup windows for Uber and Lyft.
 
-**Website:** https://drfvdev.github.io/miami-ride-radar/
+**Live website:** https://drfvdev.github.io/miami-ride-radar/
 
 ## Features
 
-- Calendar with upcoming, seven-day, and selected-day views
-- Search and filters by neighborhood and event category
-- Official event start/end times, with unknown end times clearly indicated
-- Estimated pickup focus windows, event details, directions and official source links
-- CSV export for listed events
+- **Today first:** The homepage immediately shows today's tracked events, official schedule details and clearly labeled pickup estimates
+- **Upcoming:** Search and filter by event name, venue, neighborhood or category, with 7-day, 30-day and all-date options
+- **Calendar:** Browse dates, view event indicators and open the day's details
+- **Designed for phones:** Touch-friendly cards and fixed mobile bottom navigation
+- **Light and dark modes:** A toggle in the header, saved in the browser
+- **Driver actions:** Directions and event source links
 
-## Event updates
+## Event data
 
-The website reads `events.json` on loading and when you click Refresh. This is **not yet a live automated feed**. The initial 23-event snapshot was researched on October 17, 2026. Keep the data current by updating `events.json`; an email alert alone does not update the website.
+The page reads `events.json` when it opens or when the user taps refresh. The feed's `updated_at` timestamp is shown where appropriate.
 
-An estimated pickup window is not a verified event end time or a guarantee of ride demand or surge pricing.
+The starting feed was curated on October 17, 2026. A separate monitoring schedule is configured to research and attempt to update the JSON, but verify its successful runs before claiming that the listing is continuously up to date.
 
-## Enable free hosting
+A pickup window is an estimate, never a verified departure time or an earnings prediction. Official ending times appear only where verified.
 
-GitHub repository → **Settings** → **Pages** → **Build and deployment** → **Deploy from a branch** → Branch: **main**; Folder: **/(root)** → **Save**.
+## Hosting
 
-GitHub Pages may take a few minutes to publish after being enabled.
+The static site is deployed from the root of the `main` branch through GitHub Pages. Website source files:
+
+- `index.html`, page structure
+- `styles.css`, responsive light/dark visual design
+- `app.js`, filters, calendar and event interactions
+- `events.json`, updatable event data
+
+All times are represented in Miami local time.
