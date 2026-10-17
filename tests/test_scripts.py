@@ -146,6 +146,8 @@ class Alerts(unittest.TestCase):
         self.assertIn("PICKUP 10:15–11:45 PM (estimate)", body)
         self.assertNotIn("\nC — ", body)
         self.assertIn("waze.com/ul?q=601%20Biscayne%20Blvd", html)
+        self.assertIn("google.com/maps/dir/?api=1&amp;destination=601%20Biscayne", html)
+        self.assertIn("alerts/img/google-maps.png", html)
 
     def test_day_before_single_subject(self):
         _, (subject, _, _) = alerts.day_before_email([ev("tini", "2026-10-18", title="TINI · Tour")], TODAY)

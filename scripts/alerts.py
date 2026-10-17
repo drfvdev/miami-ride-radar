@@ -73,7 +73,9 @@ def short_title(e):
 
 
 def links(e):
+    """(waze, google maps, details) URLs for an event."""
     return (f"https://waze.com/ul?q={quote(e['address'])}&navigate=yes",
+            f"https://www.google.com/maps/dir/?api=1&destination={quote(e['address'])}",
             f"{SITE}#event={quote(e['id'])}")
 
 
@@ -84,7 +86,7 @@ def text_card(e, show_date=False):
     return (f"{head}PICKUP {e['window']} ({estimate_label(e)})\n"
             f"{e['title']} — {e['venue']}\n"
             f"{when_text(e)}\n"
-            f"Waze: {links(e)[0]}")
+            f"Waze: {links(e)[0]}\nMaps: {links(e)[1]}")
 
 
 def text_notice(n):
@@ -99,7 +101,7 @@ TEXT_FOOTER = "\n\nPickup windows are estimates. Confirm before driving.\n" + SI
 # ---------- HTML ----------
 
 def html_card(e, show_date=False):
-    waze, details = links(e)
+    waze, gmaps, details = links(e)
     high = e["priority"] == "High"
     tag = ('<span style="background:#fde68a;color:#78350f;font-size:11px;font-weight:700;'
            'padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle">HIGH</span>') if high else ""
@@ -107,8 +109,11 @@ def html_card(e, show_date=False):
                  f'letter-spacing:.04em;margin-bottom:2px">{escape(nice_date(e["date"]))}</div>') if show_date else ""
     note = (f'<div style="font-size:13px;color:#6b7280;margin-top:6px">{escape(e["note"])}</div>'
             if e.get("note") and len(e["note"]) <= 140 else "")
-    btn = ('display:inline-block;padding:8px 14px;border-radius:6px;font-size:14px;font-weight:600;'
-           'text-decoration:none;margin-right:8px')
+    btn = ('display:inline-block;padding:7px 12px 7px 8px;border:1px solid #e5e7eb;border-radius:8px;'
+           'font-size:14px;font-weight:600;color:#111827;background:#ffffff;text-decoration:none;'
+           'margin:0 6px 6px 0;line-height:24px;white-space:nowrap')
+    icon = 'width="24" height="24" style="vertical-align:middle;border-radius:6px;margin-right:6px;border:0"'
+
     return f"""
 <div style="border:1px solid #e5e7eb;border-left:4px solid {'#f59e0b' if high else '#9ca3af'};border-radius:8px;padding:12px 14px;margin:0 0 12px">
   {date_line}
@@ -119,8 +124,9 @@ def html_card(e, show_date=False):
   <div style="font-size:14px;color:#374151">{escape(when_text(e))}</div>
   {note}
   <div style="margin-top:10px">
-    <a href="{escape(waze)}" style="{btn};background:#2563eb;color:#ffffff">Waze</a>
-    <a href="{escape(details)}" style="{btn};background:#f3f4f6;color:#111827">Details</a>
+    <a href="{escape(waze)}" style="{btn}"><img src="{SITE}alerts/img/waze.png" alt="" {icon}>Waze</a>
+    <a href="{escape(gmaps)}" style="{btn}"><img src="{SITE}alerts/img/google-maps.png" alt="" {icon}>Maps</a>
+    <a href="{escape(details)}" style="{btn};padding-left:12px;background:#f3f4f6">Details</a>
   </div>
 </div>"""
 
