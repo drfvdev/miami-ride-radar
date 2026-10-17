@@ -45,6 +45,30 @@
   --scrim:rgba(0,0,0,.6);
   --bar:rgba(13,14,16,.88);
 }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme]){
+  color-scheme:dark;
+  --bg:#0d0e10;
+  --surface:#16181b;
+  --surface-2:#1c1f23;
+  --line:#25282d;
+  --line-strong:#34383e;
+  --text:#eff0f2;
+  --muted:#9aa0a8;
+  --faint:#6c727a;
+  --accent:#f5b942;
+  --on-accent:#1b1404;
+  --accent-text:#f5b942;
+  --accent-soft:#2a2214;
+  --live:#4fd08a;
+  --live-soft:#132519;
+  --sel-bg:#eff0f2;
+  --sel-text:#0d0e10;
+  --scrim:rgba(0,0,0,.6);
+  --bar:rgba(13,14,16,.88);
+}
+}
+
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}

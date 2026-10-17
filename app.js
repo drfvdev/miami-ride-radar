@@ -372,17 +372,44 @@ function toast(message){
 }
 
 // ---------- Theme ----------
-function setTheme(value,save=true){
+// The site follows the device's light/dark setting, live. The theme button overrides it for this visit only,
+// and the override is dropped as soon as the device switches theme.
+const OVERRIDE_KEY = "ride-radar-theme-override";
+const deviceTheme = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+const systemTheme = () => deviceTheme && deviceTheme.matches ? "dark" : "light";
+function applyTheme(value){
  document.documentElement.dataset.theme = value;
  $("#themeToggle").setAttribute("aria-label",value==="dark"?"Switch to light mode":"Switch to dark mode");
  $("#themeToggle").title = value==="dark"?"Light mode":"Dark mode";
  $('meta[name="theme-color"]').content = value==="dark"?"#0d0e10":"#f3f2ee";
- if(save) try{localStorage.setItem("ride-radar-theme",value)}catch{}
 }
-setTheme(document.documentElement.dataset.theme==="light"?"light":"dark",false);
+function readOverride(){try{const v = sessionStorage.getItem(OVERRIDE_KEY);return v==="light"||v==="dark"?v:null}catch{return null}}
+function setOverride(value){try{if(value)sessionStorage.setItem(OVERRIDE_KEY,value);else sessionStorage.removeItem(OVERRIDE_KEY)}catch{}}
+let lastSystem = systemTheme();
+applyTheme(readOverride()||lastSystem);
+const onDeviceThemeChange = () => {lastSystem = systemTheme();setOverride(null);applyTheme(lastSystem)};
+if(deviceTheme){
+ if(deviceTheme.addEventListener) deviceTheme.addEventListener("change",onDeviceThemeChange);
+ else if(deviceTheme.addListener) deviceTheme.addListener(onDeviceThemeChange);  // older Safari
+}
+// Backup for browsers that miss the change event (e.g. a theme switch while the page was in the background):
+// re-check on return to the page and every few seconds while it's open
+function syncTheme(){
+ const sys = systemTheme();
+ if(sys!==lastSystem){lastSystem = sys;onDeviceThemeChange();return}
+ if(!readOverride() && document.documentElement.dataset.theme!==sys) applyTheme(sys);
+}
+window.addEventListener("pageshow",syncTheme);
+window.addEventListener("focus",syncTheme);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)syncTheme()});
+setInterval(syncTheme,4000);
 
 // ---------- Wiring ----------
-$("#themeToggle").addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
+$("#themeToggle").addEventListener("click",()=>{
+ const next = document.documentElement.dataset.theme==="dark"?"light":"dark";
+ setOverride(next===systemTheme()?null:next);
+ applyTheme(next);
+});
 $("#refreshButton").addEventListener("click",load);
 document.addEventListener("click",e=>{
  const viewLink = e.target.closest("[data-view]");
