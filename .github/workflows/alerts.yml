@@ -1,0 +1,53 @@
+name: Driver alerts
+
+on:
+  push:
+    branches: [main]
+    paths: [events.json]
+  schedule:
+    - cron: "0 14 * * *" # 10 AM Miami in daylight time, 9 AM in standard time
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Which alert to run
+        type: choice
+        options: [test, advance, day-before]
+        default: test
+
+permissions:
+  contents: write
+
+concurrency: alerts
+
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    env:
+      GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      ALERT_TO: ${{ secrets.ALERT_TO }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check scripts and events.json
+        run: python -m unittest discover -s tests -v
+      - name: Advance alert (new major events, cancellations, reschedules)
+        if: github.event_name != 'workflow_dispatch' || inputs.mode == 'advance'
+        run: python scripts/alerts.py advance
+      - name: Day-before alert
+        if: github.event_name == 'schedule' || inputs.mode == 'day-before'
+        run: python scripts/alerts.py day-before
+      - name: Test alert
+        if: inputs.mode == 'test'
+        run: python scripts/alerts.py test
+      - name: Save what was sent
+        run: |
+          git diff --quiet alerts/ && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add alerts/state.json
+          git commit -m "Record sent alerts"
+          git pull --rebase
+          git push
