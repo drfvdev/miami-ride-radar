@@ -7,7 +7,7 @@ A phone-first guide to large Miami-Dade events and when their crowds are likely 
 ## What the site does
 
 - **Today first.** Opens on today's events. Each one leads with the suggested pickup window, then the event, venue, start time and official end time, and one-tap Waze, Google Maps and Details buttons.
-- **Live status.** Each window shows "Starts in 2h 15m", "Open now · 40 min left" or "Pickup window passed". Events whose window has passed move to the bottom. Statuses refresh every 30 seconds and roll over at midnight. Last night's events stay on screen until their window closes, so a 4 AM festival exit still shows after midnight.
+- **Live status.** Each window shows "Pickups start in 2h 15m", "Pickup window open · 40 min left" or "Pickup window passed". Events whose window has passed move to the bottom. Statuses refresh every 30 seconds and roll over at midnight. Last night's events stay on screen until their window closes, so a 4 AM festival exit still shows after midnight.
 - **Pickup windows at a glance.** When two or more events share the day, a timeline shows their windows against a "now" marker so overlaps stand out.
 - **What's next.** Below today: Tomorrow, This week / This weekend (or Next week / Next weekend), then the next few later events.
 - **Upcoming.** Search, area and type filters, 7-day / 30-day / all ranges, and a "High only" toggle.

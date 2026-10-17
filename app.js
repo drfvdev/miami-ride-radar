@@ -80,8 +80,8 @@ function status(e){
   const w = e._win;
   if(!w) return null;
   if(now >= w.end) return {key:"done", label:"Pickup window passed"};
-  if(now >= w.start) return {key:"open", label:"Open now · "+duration(w.end-now)+" left"};
-  if(w.start-now < 18*HOUR) return {key:"soon", label:"Starts in "+duration(w.start-now)};
+  if(now >= w.start) return {key:"open", label:"Pickup window open · "+duration(w.end-now)+" left"};
+  if(w.start-now < 18*HOUR) return {key:"soon", label:"Pickups start in "+duration(w.start-now)};
   return null;
 }
 const windowLabel = e => /rough/i.test(e.window_type||"") ? "Pickup window · rough estimate" : "Pickup window · estimate";
