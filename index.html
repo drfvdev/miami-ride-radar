@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><clipPath id="gm-pin"><path d="M12 1.5a7.6 7.6 0 0 0-7.6 7.6c0 5.6 7.6 13.4 7.6 13.4s7.6-7.8 7.6-13.4A7.6 7.6 0 0 0 12 1.5z"/></clipPath></defs></svg>
 <header class="topbar">
  <div class="wrap topbar-inner">
   <a href="#today" class="brand" data-view="today" aria-label="Miami Ride Radar, today">
@@ -135,10 +136,7 @@
    <div><dt>Opportunity</dt><dd id="sheetLevel"></dd></div>
    <div><dt>Location</dt><dd id="sheetAddress"></dd></div>
   </dl>
-  <div class="actions">
-   <a id="sheetWaze" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Waze</a>
-   <a id="sheetMaps" class="btn" target="_blank" rel="noopener noreferrer">Google Maps</a>
-  </div>
+  <div class="actions" id="sheetNav"></div>
   <div class="sheet-notes">
    <h3>Traffic and pickup notes</h3>
    <p id="sheetNotes"></p>

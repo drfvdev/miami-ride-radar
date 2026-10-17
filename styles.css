@@ -97,7 +97,13 @@ h1{font-size:28px;line-height:1.15;font-weight:750;letter-spacing:-.025em}
 .btn-primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn-primary:hover{background:var(--accent);filter:brightness(1.05)}
 .btn-sm{min-height:36px;padding:0 12px;font-size:13px;border-radius:10px}
-.actions{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:8px}
+.actions{display:grid;grid-template-columns:1fr 1fr 46px;gap:8px}
+.nav-icon{width:22px;height:22px;flex:none}
+.btn-waze{background:#33ccff;border-color:#33ccff;color:#0b0b0b}
+.btn-waze:hover{background:#33ccff;filter:brightness(1.05)}
+.btn-gmaps{white-space:nowrap}
+.btn-more{padding:0}
+.btn-more svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .actions-3{grid-template-columns:repeat(3,1fr)}
 
 /* ---------- Opportunity card (today) ---------- */
@@ -270,8 +276,8 @@ h1{font-size:28px;line-height:1.15;font-weight:750;letter-spacing:-.025em}
 }
 @media (max-width:360px){
   .opp-window{font-size:26px}
-  .actions{grid-template-columns:1fr 1fr}
-  .actions .btn-primary{grid-column:1/-1}
+  .actions .btn{font-size:14px;padding:0 8px}
+  .actions .nav-icon{width:19px;height:19px}
 }
 @media (prefers-reduced-motion:reduce){#refreshButton.spinning svg{animation:none}.toast{transition:none}}
 #sheetTitle:focus{outline:none}

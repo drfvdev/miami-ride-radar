@@ -114,6 +114,12 @@ const filtered = arr => sorted(arr.filter(e => (area==="all"||e.area===area)&&(c
 const plural = (n,word) => n+" "+word+(n===1?"":"s");
 
 // ---------- Building blocks ----------
+// App icons drawn after the Waze and Google Maps logos so drivers recognize them at a glance
+const WAZE_ICON = '<svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.2 3.6c-4.6 0-8 3.1-8 7.3 0 1.3.3 2.4.9 3.3-.5 1-1.4 1.7-2.5 2 .9.9 2.5 1.4 4 1.1 1.3.9 3 1.4 4.8 1.4h1.1c4.6-.2 7.6-3.3 7.6-7.5 0-4.4-3.4-7.6-7.9-7.6z" fill="#fff" stroke="#0b0b0b" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="9.6" r="1.05" fill="#0b0b0b"/><circle cx="15" cy="9.6" r="1.05" fill="#0b0b0b"/><path d="M9.4 12.4c.8 1.2 1.9 1.8 3.1 1.8s2.3-.6 3.1-1.8" fill="none" stroke="#0b0b0b" stroke-width="1.4" stroke-linecap="round"/><circle cx="8.3" cy="19.4" r="2.1" fill="#0b0b0b"/><circle cx="16.3" cy="19.4" r="2.1" fill="#0b0b0b"/></svg>';
+const GMAPS_ICON = '<svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><g clip-path="url(#gm-pin)"><rect x="0" y="0" width="12" height="9.1" fill="#ea4335"/><rect x="12" y="0" width="12" height="9.1" fill="#4285f4"/><rect x="0" y="9.1" width="12" height="15" fill="#fbbc04"/><rect x="12" y="9.1" width="12" height="15" fill="#34a853"/></g><circle cx="12" cy="9.1" r="3.2" fill="#fff"/></svg>';
+const navButtons = e =>
+  '<a class="btn btn-waze" href="'+esc(wazeURL(e))+'" target="_blank" rel="noopener noreferrer" aria-label="Navigate to '+esc(e.venue)+' with Waze">'+WAZE_ICON+'Waze</a>'
+  +'<a class="btn btn-gmaps" href="'+esc(mapURL(e))+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+esc(e.venue)+' in Google Maps">'+GMAPS_ICON+'Google Maps</a>';
 function card(e){
  const s = status(e), w = windowText(e);
  const runs = e.date_end && e.date_end!==e.date ? '<div><dt>Runs</dt><dd>'+esc(shortDate(e.date))+' – '+esc(shortDate(e.date_end))+'</dd></div>' : "";
@@ -125,9 +131,8 @@ function card(e){
   +'<h3><button type="button" class="title-link" data-event="'+esc(e.id)+'">'+esc(e.title)+'</button></h3>'
   +'<p class="opp-place">'+esc(e.venue)+' · '+esc(e.area||"Miami")+'</p>'
   +'<dl class="facts"><div><dt>Starts</dt><dd>'+(clock(e.start)?esc(clock(e.start)):'<span class="unpublished">Not published</span>')+'</dd></div><div><dt>Ends</dt><dd>'+endHTML(e)+'</dd></div>'+runs+'</dl>'
-  +'<div class="actions"><a class="btn btn-primary" href="'+esc(wazeURL(e))+'" target="_blank" rel="noopener noreferrer" aria-label="Navigate to '+esc(e.venue)+' with Waze">Waze</a>'
-  +'<a class="btn" href="'+esc(mapURL(e))+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+esc(e.venue)+' in Google Maps">Maps</a>'
-  +'<button type="button" class="btn" data-event="'+esc(e.id)+'">Details</button></div></article>';
+  +'<div class="actions">'+navButtons(e)
+  +'<button type="button" class="btn btn-more" data-event="'+esc(e.id)+'" aria-label="Details for '+esc(e.title)+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button></div></article>';
 }
 function row(e,showDate=true){
  const w = windowText(e);
@@ -324,8 +329,7 @@ function showDetail(id){
  $("#sheetLevel").textContent = e.priority ? e.priority : "Not rated";
  $("#sheetAddress").textContent = e.venue+(e.address?", "+e.address:"");
  $("#sheetNotes").textContent = e.note||"Check the official event page for road closures and pickup areas before driving.";
- $("#sheetMaps").href = mapURL(e);
- $("#sheetWaze").href = wazeURL(e);
+ $("#sheetNav").innerHTML = navButtons(e);
  $("#sheetSource").href = officialURL(e);
  const sheet = $("#sheet");if(!sheet.open)sheet.showModal();
  sheet.scrollTop = 0;
