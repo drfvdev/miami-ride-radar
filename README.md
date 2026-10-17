@@ -1,41 +1,62 @@
 # Miami Ride Radar
 
-A phone-first calendar of Miami-Dade events and potential rideshare pickup windows for Uber and Lyft.
+A phone-first guide to large Miami-Dade events and when their crowds are likely to need rides, for Uber and Lyft drivers.
 
 **Live website:** https://drfvdev.github.io/miami-ride-radar/
 
-## Features
+## What the site does
 
-- **Next pickup:** A live countdown to the next pickup window, which turns green with a "closes in" timer while a window is open
-- **Tonight's timeline:** Today's pickup windows on one time axis with a "now" marker, so overlapping or back-to-back pickups are easy to spot
-- **Live status on every card:** "Pickups in 2h 15m", "Window open", or "Pickup window passed" (passed events drop to the bottom); refreshes every 30 seconds and rolls over at midnight
-- **Today first:** The homepage immediately shows today's tracked events, official schedule details and clearly labeled pickup estimates
-- **Upcoming:** Search and filter by event name, venue, neighborhood or category, with 7-day, 30-day and all-date options
-- **Calendar:** Browse dates, view event indicators and open the day's details
-- **Designed for phones:** Touch-friendly cards and fixed mobile bottom navigation
-- **Light and dark modes:** A toggle in the header, saved in the browser
-- **Driver actions:** Waze and Google Maps navigation, add the pickup window to your calendar (.ics with a 30-minute reminder), share an event link, and the official event page
-- **Shareable links:** `#today`, `#upcoming`, `#calendar` and `#event=<id>` work with the back button and can be sent to other drivers
-- **Add to home screen:** Includes a web app manifest and icon
+- **Today first.** Opens on today's events. Each one leads with the suggested pickup window, then the event, venue, start time and official end time, and one-tap Waze, Google Maps and Details buttons.
+- **Live status.** Each window shows "Starts in 2h 15m", "Open now · 40 min left" or "Pickup window passed". Events whose window has passed move to the bottom. Statuses refresh every 30 seconds and roll over at midnight. Last night's events stay on screen until their window closes, so a 4 AM festival exit still shows after midnight.
+- **Pickup windows at a glance.** When two or more events share the day, a timeline shows their windows against a "now" marker so overlaps stand out.
+- **What's next.** Below today: Tomorrow, This week / This weekend (or Next week / Next weekend), then the next few later events.
+- **Upcoming.** Search, area and type filters, 7-day / 30-day / all ranges, and a "High only" toggle.
+- **Calendar.** Month view with a dot per event (amber = high opportunity). Tap a day to list its events.
+- **Event details.** A bottom sheet with the pickup window (marked as an estimate), start time, official end (or "Not published"), opportunity level, address, traffic notes, Waze / Maps, add-to-calendar (.ics with a 30-minute reminder), share and the official page.
+- **Data freshness.** The footer shows when listings were last updated. If the feed is more than 48 hours old, a warning appears at the top.
+- **Light and dark themes.** Dark is the default for night driving, unless the phone is set to light. The choice is remembered.
+- **Home screen.** Includes a web app manifest and icon for "Add to Home Screen".
+- **Links.** `#today`, `#upcoming`, `#calendar` and `#event=<id>` work with the back button and can be shared.
+
+## Status
+
+| Part | State |
+|---|---|
+| Website (this repo, GitHub Pages) | Working, tested at phone and desktop widths in both themes |
+| `events.json` feed | 23 events researched by hand on October 17, 2026 |
+| Automatic daily feed updates | **Not verified.** Scheduled ChatGPT tasks exist but had never run as of Oct 17, 2026 |
+| Advance and day-before email alerts | **Not verified.** Same scheduled tasks; email delivery never tested |
+| Opportunity levels (High/Medium) | Editorial judgment based on venue size and event type, not live demand data |
+| Verified rideshare pickup zones | Not built. Directions go to the venue address |
 
 ## Event data
 
-The page reads `events.json` when it opens or when the user taps refresh. The feed's `updated_at` timestamp is shown where appropriate.
+The page reads `events.json` on load and when the refresh button is tapped. Fields:
 
-The starting feed was curated on October 17, 2026. A separate monitoring schedule is configured to research and attempt to update the JSON, but verify its successful runs before claiming that the listing is continuously up to date.
+| Field | Meaning |
+|---|---|
+| `id`, `title`, `date` | Required. `date` is `YYYY-MM-DD` in Miami time |
+| `date_end` | Last day of a multi-day event |
+| `start` | Scheduled start, `HH:MM` 24-hour |
+| `end`, `end_date`, `end_verified` | Official end. Shown only when `end_verified` is `true`. `end_date` marks an end after midnight |
+| `window` | Suggested pickup window as text, for example `10:15–11:45 PM` or `10:30 PM–12:15 AM` |
+| `window_start`, `window_end` | Optional `HH:MM` 24-hour times. When present they are used instead of parsing `window` |
+| `window_type` | How the window was estimated, such as `rough planning estimate` |
+| `priority` | `High` or `Medium` |
+| `category`, `area`, `venue`, `address`, `note`, `source` | Display details. `source` must be an `https://` link |
 
-Countdowns and the timeline read the `window` text when it follows the pattern `10:15–11:45 PM` or `10:30 PM–12:15 AM`. Free-text windows such as "Multiple daytime departures" still display, but without a countdown. An early-morning window for an evening event (for example `3:15–4:30 AM` for a 4 PM festival) is treated as the following night.
+Countdowns and the timeline need a window in one of the formats above. Free text such as "Multiple daytime departures" still displays, but without a countdown. An early-morning window for an evening event (for example `3:15–4:30 AM` for a 4 PM festival) is treated as the following night.
 
-A pickup window is an estimate, never a verified departure time or an earnings prediction. Official ending times appear only where verified.
+A pickup window is an estimate, never a verified departure time or an earnings prediction.
 
 ## Hosting
 
-The static site is deployed from the root of the `main` branch through GitHub Pages. Website source files:
+Static site served from the root of `main` through GitHub Pages. No build step.
 
-- `index.html`, page structure
-- `styles.css`, responsive light/dark visual design
-- `app.js`, filters, calendar and event interactions
-- `events.json`, updatable event data
-- `manifest.webmanifest` and `icon.svg`, home-screen app icon
+- `index.html`: page structure
+- `styles.css`: mobile-first layout, light and dark themes
+- `app.js`: rendering, filters, calendar, live status, detail sheet
+- `events.json`: event data
+- `manifest.webmanifest`, `icon.svg`: home-screen app icon
 
-All times are represented in Miami local time.
+All times are Miami local time.
