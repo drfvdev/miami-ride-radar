@@ -23,9 +23,10 @@ A phone-first guide to large Miami-Dade events and when their crowds are likely 
 | Part | State |
 |---|---|
 | Website (this repo, GitHub Pages) | Working, tested at phone and desktop widths in both themes |
-| `events.json` feed | 23 events researched by hand on October 17, 2026 |
-| Automatic daily feed updates | **Not verified.** Scheduled ChatGPT tasks exist but had never run as of Oct 17, 2026 |
-| Advance and day-before email alerts | **Not verified.** Same scheduled tasks; email delivery never tested |
+| `events.json` feed | 23 events researched by hand on October 17, 2026, plus automatic updates since |
+| Automatic daily feed updates | **Working.** Claude cloud routine, first successful run Oct 17, 2026 ([8b9437e](https://github.com/drfvdev/miami-ride-radar/commit/8b9437e), 2 events added) |
+| Advance email alerts | **Working.** Sent "2 new major events" on Oct 17, 2026 after that run ([Action run](https://github.com/drfvdev/miami-ride-radar/actions/runs/39066762572)) |
+| Day-before email alerts | **Delivery tested** with a test email on Oct 17, 2026 ([Action run](https://github.com/drfvdev/miami-ride-radar/actions/runs/39066141812)). First scheduled send is Oct 18 |
 | Opportunity levels (High/Medium) | Editorial judgment based on venue size and event type, not live demand data |
 | Verified rideshare pickup zones | Not built. Directions go to the venue address |
 
@@ -48,6 +49,32 @@ The page reads `events.json` on load and when the refresh button is tapped. Fiel
 Countdowns and the timeline need a window in one of the formats above. Free text such as "Multiple daytime departures" still displays, but without a countdown. An early-morning window for an evening event (for example `3:15–4:30 AM` for a 4 PM festival) is treated as the following night.
 
 A pickup window is an estimate, never a verified departure time or an earnings prediction.
+
+## Automation
+
+Two parts, each with one job:
+
+1. **Daily research (Claude cloud routine).** The routine [Miami Ride Radar daily event update](https://claude.ai/code/routines/trig_01MopH7XRWWHsRKJi1KRtWdb) runs every day at 12:03 UTC (8:03 AM Miami in daylight time, 7:03 AM in standard time) in the claude.ai cloud. Your Mac does not need to be on. It follows [`scripts/RESEARCH.md`](scripts/RESEARCH.md): it researches Miami-Dade events for the next 14 days on official sites, writes its findings as proposals, and runs [`scripts/update_events.py`](scripts/update_events.py), which:
+   - accepts only proposals marked confirmed on an `https://` official source
+   - keeps official end times (`end_verified`) separate from estimated pickup windows, and never replaces a verified end time with an unverified one
+   - deduplicates by `id` (and by same title, date and venue)
+   - never removes a listing just because research didn't find it again
+   - handles cancellations (removed, with a notice) and reschedules (same `id`, new date, with a notice)
+   - drops past events and sets `updated_at`
+
+   Then it commits `events.json` to `main`.
+2. **Email alerts (GitHub Action [`alerts.yml`](.github/workflows/alerts.yml)).** It sends through Gmail from and to the `GMAIL_ADDRESS` secret, or to `ALERT_TO` if that's set.
+   - **Advance alert:** runs whenever `events.json` changes and once a day. One email covers new High-priority events plus any cancellations and reschedules. Each event is announced once.
+   - **Day-before alert:** runs daily at 14:00 UTC (10 AM Miami in daylight time, 9 AM in standard time). It covers tomorrow's events with their official end time (or "Not published") and estimated pickup window. It is sent once per date.
+   - What has been sent is recorded in `alerts/state.json`.
+
+**Setup that already exists:** repo secrets `GMAIL_ADDRESS` and `GMAIL_APP_PASSWORD` (a Gmail app password from myaccount.google.com/apppasswords). The claude.ai cloud environment "Default" has network access set to **Full**, so the routine can open official event sites. With the default "Trusted" level, the routine can't verify anything and makes no changes.
+
+**Check or run by hand**
+- Research now: open the routine link above and click **Run now**. Each run's summary lists what it added, updated, skipped and why.
+- Test email: GitHub → Actions → Driver alerts → **Run workflow** → mode `test`. Or from a terminal: `gh workflow run alerts.yml -R drfvdev/miami-ride-radar -f mode=test`
+- Tests: `python3 -m unittest discover -s tests`
+- Preview alerts without sending: `python3 scripts/alerts.py day-before --dry-run`
 
 ## Hosting
 
