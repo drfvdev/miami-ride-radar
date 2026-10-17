@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T14:00:00-04:00",
+  "updated_at": "2026-10-17T16:27:00-04:00",
   "timezone": "America/New_York",
   "events": [
     {
@@ -20,6 +20,25 @@
       "window_type": "estimated pickup window",
       "note": "Multiple stages run through 4 AM. Road closures reported around Wynwood through Sunday evening. Approach legal pickup locations and watch road controls.",
       "source": "https://www.iiipoints.com/set-times/"
+    },
+    {
+      "id": "hurricanes-fsu-2026",
+      "title": "Miami Hurricanes vs Florida State",
+      "date": "2026-10-17",
+      "start": "19:00",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Miami Gardens",
+      "venue": "Hard Rock Stadium",
+      "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
+      "priority": "High",
+      "window": "10:00 PM–11:15 PM",
+      "window_start": "22:00",
+      "window_end": "23:15",
+      "window_type": "rough planning estimate",
+      "note": "College football at stadium; follow official rideshare instructions. Kickoff subject to change.",
+      "source": "https://miamihurricanes.com/sports/football/schedule/"
     },
     {
       "id": "fiesta-latina-2026",
@@ -56,23 +75,6 @@
       "source": "https://www.kaseyacenter.com/events"
     },
     {
-      "id": "miami-heat-home-opener",
-      "title": "Miami HEAT vs Minnesota Timberwolves · Home Opener",
-      "date": "2026-10-21",
-      "start": "19:30",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "9:45–10:45 PM",
-      "window_type": "rough planning estimate",
-      "note": "NBA home opener. Overtime can change exit time significantly.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
-    {
       "id": "aew-dynamite-2026",
       "title": "AEW Dynamite",
       "date": "2026-10-21",
@@ -88,6 +90,23 @@
       "window_type": "rough planning estimate",
       "note": "Event length and actual crowd exit are not confirmed.",
       "source": "https://www.ticketmaster.com/watsco-center-at-the-university-of-miami-tickets-coral-gables/venue/107166"
+    },
+    {
+      "id": "miami-heat-home-opener",
+      "title": "Miami HEAT vs Minnesota Timberwolves · Home Opener",
+      "date": "2026-10-21",
+      "start": "19:30",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "High",
+      "window": "9:45–10:45 PM",
+      "window_type": "rough planning estimate",
+      "note": "NBA home opener. Overtime can change exit time significantly.",
+      "source": "https://www.kaseyacenter.com/events"
     },
     {
       "id": "alvaro-diaz-2026",
@@ -124,6 +143,25 @@
       "source": "https://www.kaseyacenter.com/events"
     },
     {
+      "id": "hurricanes-pitt-2026",
+      "title": "Miami Hurricanes vs Pittsburgh",
+      "date": "2026-10-24",
+      "start": "12:00",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Miami Gardens",
+      "venue": "Hard Rock Stadium",
+      "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
+      "priority": "High",
+      "window": "3:00–4:15 PM",
+      "window_start": "15:00",
+      "window_end": "16:15",
+      "window_type": "rough planning estimate",
+      "note": "College football at stadium; follow official rideshare instructions. Kickoff subject to change.",
+      "source": "https://miamihurricanes.com/sports/football/schedule/"
+    },
+    {
       "id": "chayanne-2026",
       "title": "Chayanne · Bailemos Otra Vez Tour",
       "date": "2026-10-24",
@@ -138,6 +176,23 @@
       "window": "10:15–11:45 PM",
       "window_type": "rough planning estimate",
       "note": "Arena concert. Real end time unconfirmed.",
+      "source": "https://www.kaseyacenter.com/events"
+    },
+    {
+      "id": "heat-mavericks-2026",
+      "title": "Miami HEAT vs Dallas Mavericks",
+      "date": "2026-10-26",
+      "start": "19:30",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "High",
+      "window": "9:45–10:45 PM",
+      "window_type": "rough planning estimate",
+      "note": "Overlaps with the Steve Lacy show near Bayfront Park. Expect possible traffic, not guaranteed pricing.",
       "source": "https://www.kaseyacenter.com/events"
     },
     {
@@ -158,21 +213,22 @@
       "source": "https://www.ticketmaster.com/discover/miami"
     },
     {
-      "id": "heat-mavericks-2026",
-      "title": "Miami HEAT vs Dallas Mavericks",
+      "id": "air-cargo-2026",
+      "title": "Air Cargo Forum and Exhibition · Oct 26–29",
       "date": "2026-10-26",
-      "start": "19:30",
+      "date_end": "2026-10-29",
+      "start": "",
       "end": "",
       "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "9:45–10:45 PM",
-      "window_type": "rough planning estimate",
-      "note": "Overlaps with the Steve Lacy show near Bayfront Park. Expect possible traffic, not guaranteed pricing.",
-      "source": "https://www.kaseyacenter.com/events"
+      "category": "Convention",
+      "area": "Miami Beach",
+      "venue": "Miami Beach Convention Center",
+      "address": "1901 Convention Center Dr, Miami Beach, FL 33139",
+      "priority": "Medium",
+      "window": "Multiple daytime departures",
+      "window_type": "unverified timing",
+      "note": "Multi-day trade event. Session finish times need checking.",
+      "source": "https://www.miamibeachconvention.com/events"
     },
     {
       "id": "uli-2026",
@@ -191,24 +247,6 @@
       "window_type": "unverified timing",
       "note": "Multi-day professional conference. Check daily programming for concentrated exits.",
       "source": "https://www.miamibeachconvention.com/events/uli-fall-meeting-2026"
-    },
-    {
-      "id": "air-cargo-2026",
-      "title": "Air Cargo Forum and Exhibition · Oct 26–29",
-      "date": "2026-10-26",
-      "date_end": "2026-10-29",
-      "start": "",
-      "end": "",
-      "end_verified": false,
-      "category": "Convention",
-      "area": "Miami Beach",
-      "venue": "Miami Beach Convention Center",
-      "address": "1901 Convention Center Dr, Miami Beach, FL 33139",
-      "priority": "Medium",
-      "window": "Multiple daytime departures",
-      "window_type": "unverified timing",
-      "note": "Multi-day trade event. Session finish times need checking.",
-      "source": "https://www.miamibeachconvention.com/events"
     },
     {
       "id": "wte-2026",
