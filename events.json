@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T16:27:00-04:00",
+  "updated_at": "2026-10-18T08:05:18-04:00",
   "timezone": "America/New_York",
   "events": [
     {
@@ -20,42 +20,6 @@
       "window_type": "estimated pickup window",
       "note": "Multiple stages run through 4 AM. Road closures reported around Wynwood through Sunday evening. Approach legal pickup locations and watch road controls.",
       "source": "https://www.iiipoints.com/set-times/"
-    },
-    {
-      "id": "hurricanes-fsu-2026",
-      "title": "Miami Hurricanes vs Florida State",
-      "date": "2026-10-17",
-      "start": "19:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Miami Gardens",
-      "venue": "Hard Rock Stadium",
-      "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
-      "priority": "High",
-      "window": "10:00 PM–11:15 PM",
-      "window_start": "22:00",
-      "window_end": "23:15",
-      "window_type": "rough planning estimate",
-      "note": "College football at stadium; follow official rideshare instructions. Kickoff subject to change.",
-      "source": "https://miamihurricanes.com/sports/football/schedule/"
-    },
-    {
-      "id": "fiesta-latina-2026",
-      "title": "iHeartRadio Fiesta Latina",
-      "date": "2026-10-17",
-      "start": "20:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Concert",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "10:15–11:45 PM",
-      "window_type": "rough planning estimate",
-      "note": "Arena crowd. Official end time not published. Confirm real-time event status before driving.",
-      "source": "https://www.kaseyacenter.com/events"
     },
     {
       "id": "tini-2026",
