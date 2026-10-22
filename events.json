@@ -1,41 +1,7 @@
 {
-  "updated_at": "2026-10-19T08:08:17-04:00",
+  "updated_at": "2026-10-22T08:13:00-04:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "aew-dynamite-2026",
-      "title": "AEW Dynamite",
-      "date": "2026-10-21",
-      "start": "19:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Coral Gables",
-      "venue": "Watsco Center",
-      "address": "1245 Dauer Dr, Coral Gables, FL 33146",
-      "priority": "Medium",
-      "window": "9:30–11:00 PM",
-      "window_type": "rough planning estimate",
-      "note": "Event length and actual crowd exit are not confirmed.",
-      "source": "https://www.ticketmaster.com/watsco-center-at-the-university-of-miami-tickets-coral-gables/venue/107166"
-    },
-    {
-      "id": "miami-heat-home-opener",
-      "title": "Miami HEAT vs Minnesota Timberwolves · Home Opener",
-      "date": "2026-10-21",
-      "start": "19:30",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "9:45–10:45 PM",
-      "window_type": "rough planning estimate",
-      "note": "NBA home opener. Overtime can change exit time significantly.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
     {
       "id": "alvaro-diaz-2026",
       "title": "Álvaro Díaz · Omakase Tour",
