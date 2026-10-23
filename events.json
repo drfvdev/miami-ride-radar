@@ -1,24 +1,7 @@
 {
-  "updated_at": "2026-10-22T08:13:00-04:00",
+  "updated_at": "2026-10-23T08:18:19-04:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "alvaro-diaz-2026",
-      "title": "Álvaro Díaz · Omakase Tour",
-      "date": "2026-10-22",
-      "start": "20:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Concert",
-      "area": "Miami Beach",
-      "venue": "The Fillmore Miami Beach",
-      "address": "1700 Washington Ave, Miami Beach, FL 33139",
-      "priority": "Medium",
-      "window": "10:00–11:30 PM",
-      "window_type": "rough planning estimate",
-      "note": "Miami Beach traffic and designated pickup areas may affect timing.",
-      "source": "https://www.ticketmaster.com/discover/miami"
-    },
     {
       "id": "heat-pistons-2026",
       "title": "Miami HEAT vs Detroit Pistons",
