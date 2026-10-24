@@ -1,24 +1,7 @@
 {
-  "updated_at": "2026-10-23T08:18:19-04:00",
+  "updated_at": "2026-10-24T08:07:51-04:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "heat-pistons-2026",
-      "title": "Miami HEAT vs Detroit Pistons",
-      "date": "2026-10-23",
-      "start": "20:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "10:15–11:15 PM",
-      "window_type": "rough planning estimate",
-      "note": "Game length varies. Check live score in the final quarter.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
     {
       "id": "hurricanes-pitt-2026",
       "title": "Miami Hurricanes vs Pittsburgh",
@@ -229,6 +212,24 @@
       "window_type": "unverified timing",
       "note": "Check programming for general session exits and day close.",
       "source": "https://www.miamibeachconvention.com/events"
+    },
+    {
+      "id": "tony-robbins-2026",
+      "title": "Tony Robbins · Unleash the Power Within · Nov 5–8",
+      "date": "2026-11-05",
+      "date_end": "2026-11-08",
+      "start": "",
+      "end": "",
+      "end_verified": false,
+      "category": "Special event",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "Medium",
+      "window": "Multiple daily departures",
+      "window_type": "unverified timing",
+      "note": "Multi-day seminar at the arena; daily session times not published on the venue page. Expect heavy pickups around session breaks and ends.",
+      "source": "https://www.kaseyacenter.com/events/detail/tony-robbins"
     },
     {
       "id": "dolphins-lions-2026",
