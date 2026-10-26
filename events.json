@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T08:07:09-04:00",
+  "updated_at": "2026-10-26T08:07:58-04:00",
   "timezone": "America/New_York",
   "events": [
     {
@@ -213,6 +213,24 @@
       "source": "https://www.miamidolphins.com/schedule/"
     },
     {
+      "id": "adobe-max-2026",
+      "title": "Adobe MAX · Nov 10–12",
+      "date": "2026-11-10",
+      "date_end": "2026-11-12",
+      "start": "",
+      "end": "",
+      "end_verified": false,
+      "category": "Convention",
+      "area": "Miami Beach",
+      "venue": "Miami Beach Convention Center",
+      "address": "1901 Convention Center Dr, Miami Beach, FL 33139",
+      "priority": "Medium",
+      "window": "Multiple daytime departures",
+      "window_type": "unverified timing",
+      "note": "Check programming for keynote and day-close exits.",
+      "source": "https://www.miamibeachconvention.com/events"
+    },
+    {
       "id": "doja-cat-2026",
       "title": "Doja Cat · Ma Vie World Tour",
       "date": "2026-11-11",
@@ -227,6 +245,25 @@
       "window": "9:45–11:15 PM",
       "window_type": "rough planning estimate",
       "note": "Official concert end time unconfirmed.",
+      "source": "https://www.kaseyacenter.com/events"
+    },
+    {
+      "id": "neighbourhood-2026",
+      "title": "The Neighbourhood · The Wourld Tour",
+      "date": "2026-11-12",
+      "start": "19:00",
+      "end": "",
+      "end_verified": false,
+      "category": "Concert",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "Medium",
+      "window": "9:15–10:45 PM",
+      "window_start": "21:15",
+      "window_end": "22:45",
+      "window_type": "rough planning estimate",
+      "note": "Official concert end time unconfirmed. Expect Biscayne Blvd congestion after the show.",
       "source": "https://www.kaseyacenter.com/events"
     },
     {
