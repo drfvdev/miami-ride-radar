@@ -1,41 +1,7 @@
 {
-  "updated_at": "2026-10-26T08:07:58-04:00",
+  "updated_at": "2026-10-27T08:18:07-04:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "heat-mavericks-2026",
-      "title": "Miami HEAT vs Dallas Mavericks",
-      "date": "2026-10-26",
-      "start": "19:30",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "9:45–10:45 PM",
-      "window_type": "rough planning estimate",
-      "note": "Overlaps with the Steve Lacy show near Bayfront Park. Expect possible traffic, not guaranteed pricing.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
-    {
-      "id": "steve-lacy-2026",
-      "title": "Steve Lacy · Oh Yeah? Tour",
-      "date": "2026-10-26",
-      "start": "20:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Concert",
-      "area": "Downtown",
-      "venue": "FPL Solar Amphitheater · Bayfront Park",
-      "address": "301 Biscayne Blvd, Miami, FL 33132",
-      "priority": "Medium",
-      "window": "10:00–11:30 PM",
-      "window_type": "rough planning estimate",
-      "note": "Outdoor venue. Weather and traffic may change the practical pickup window.",
-      "source": "https://www.ticketmaster.com/discover/miami"
-    },
     {
       "id": "air-cargo-2026",
       "title": "Air Cargo Forum and Exhibition · Oct 26–29",
