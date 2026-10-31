@@ -1,60 +1,7 @@
 {
-  "updated_at": "2026-10-29T08:22:40-04:00",
+  "updated_at": "2026-10-31T08:07:48-04:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "air-cargo-2026",
-      "title": "Air Cargo Forum and Exhibition · Oct 26–29",
-      "date": "2026-10-26",
-      "date_end": "2026-10-29",
-      "start": "",
-      "end": "",
-      "end_verified": false,
-      "category": "Convention",
-      "area": "Miami Beach",
-      "venue": "Miami Beach Convention Center",
-      "address": "1901 Convention Center Dr, Miami Beach, FL 33139",
-      "priority": "Medium",
-      "window": "Multiple daytime departures",
-      "window_type": "unverified timing",
-      "note": "Multi-day trade event. Session finish times need checking.",
-      "source": "https://www.miamibeachconvention.com/events"
-    },
-    {
-      "id": "foodbev-2026",
-      "title": "Miami Beach Food and Beverage Expo · Oct 28–29",
-      "date": "2026-10-28",
-      "date_end": "2026-10-29",
-      "start": "",
-      "end": "",
-      "end_verified": false,
-      "category": "Convention",
-      "area": "Miami Beach",
-      "venue": "Miami Beach Convention Center",
-      "address": "1901 Convention Center Dr, Miami Beach, FL 33139",
-      "priority": "Medium",
-      "window": "Multiple daytime departures",
-      "window_type": "unverified timing",
-      "note": "Check event schedule for actual show floor closing times.",
-      "source": "https://www.miamibeachconvention.com/events"
-    },
-    {
-      "id": "heat-pacers-cup-2026",
-      "title": "Miami HEAT vs Indiana Pacers · NBA Cup",
-      "date": "2026-10-30",
-      "start": "20:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "10:15–11:15 PM",
-      "window_type": "rough planning estimate",
-      "note": "NBA Cup group game; actual exit may move with game length.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
     {
       "id": "dolphins-patriots-2026",
       "title": "Miami Dolphins vs New England Patriots",
@@ -106,7 +53,7 @@
       "window": "Multiple daily departures",
       "window_type": "unverified timing",
       "note": "Multi-day seminar at the arena; daily session times not published on the venue page. Expect heavy pickups around session breaks and ends.",
-      "source": "https://www.kaseyacenter.com/events/detail/tony-robbins"
+      "source": "https://www.kaseyacenter.com/events"
     },
     {
       "id": "dolphins-lions-2026",
