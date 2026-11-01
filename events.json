@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T08:07:48-04:00",
+  "updated_at": "2026-11-01T07:08:00-05:00",
   "timezone": "America/New_York",
   "events": [
     {
@@ -160,6 +160,25 @@
       "window": "10:15–11:15 PM",
       "window_start": "22:15",
       "window_end": "23:15",
+      "window_type": "rough planning estimate",
+      "note": "Exit time moves with game length.",
+      "source": "https://www.kaseyacenter.com/events"
+    },
+    {
+      "id": "heat-rockets-2026",
+      "title": "Miami HEAT vs Houston Rockets",
+      "date": "2026-11-16",
+      "start": "19:30",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "High",
+      "window": "9:45–10:45 PM",
+      "window_start": "21:45",
+      "window_end": "22:45",
       "window_type": "rough planning estimate",
       "note": "Exit time moves with game length.",
       "source": "https://www.kaseyacenter.com/events"
