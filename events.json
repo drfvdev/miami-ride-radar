@@ -1,24 +1,7 @@
 {
-  "updated_at": "2026-11-01T07:08:00-05:00",
+  "updated_at": "2026-11-02T07:16:34-05:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "dolphins-patriots-2026",
-      "title": "Miami Dolphins vs New England Patriots",
-      "date": "2026-11-01",
-      "start": "16:25",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Miami Gardens",
-      "venue": "Hard Rock Stadium",
-      "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
-      "priority": "High",
-      "window": "7:30–8:45 PM",
-      "window_type": "rough planning estimate",
-      "note": "Large stadium with dedicated traffic patterns. Follow official rideshare instructions. Kickoff subject to change.",
-      "source": "https://www.miamidolphins.com/schedule/"
-    },
     {
       "id": "hospitality-show-2026",
       "title": "The Hospitality Show · Nov 2–4",
