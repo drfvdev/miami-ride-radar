@@ -1,25 +1,7 @@
 {
-  "updated_at": "2026-11-04T07:10:54-05:00",
+  "updated_at": "2026-11-05T07:07:53-05:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "hospitality-show-2026",
-      "title": "The Hospitality Show · Nov 2–4",
-      "date": "2026-11-02",
-      "date_end": "2026-11-04",
-      "start": "",
-      "end": "",
-      "end_verified": false,
-      "category": "Convention",
-      "area": "Miami Beach",
-      "venue": "Miami Beach Convention Center",
-      "address": "1901 Convention Center Dr, Miami Beach, FL 33139",
-      "priority": "Medium",
-      "window": "Multiple daytime departures",
-      "window_type": "unverified timing",
-      "note": "Check programming for general session exits and day close.",
-      "source": "https://www.miamibeachconvention.com/events"
-    },
     {
       "id": "tony-robbins-2026",
       "title": "Tony Robbins · Unleash the Power Within · Nov 5–8",
