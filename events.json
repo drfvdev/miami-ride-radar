@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T07:07:45-05:00",
+  "updated_at": "2026-11-08T07:07:08-05:00",
   "timezone": "America/New_York",
   "events": [
     {
@@ -204,6 +204,23 @@
       "source": "https://www.kaseyacenter.com/events"
     },
     {
+      "id": "hurricanes-vt-2026",
+      "title": "Miami Hurricanes vs Virginia Tech",
+      "date": "2026-11-21",
+      "start": "",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Miami Gardens",
+      "venue": "Hard Rock Stadium",
+      "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
+      "priority": "High",
+      "window": "Kickoff TBA",
+      "window_type": "unverified timing",
+      "note": "Kickoff time not yet announced (TBA); same date as John Summit night 2 downtown. Check schedule for kickoff.",
+      "source": "https://www.hardrockstadium.com/events/"
+    },
+    {
       "id": "john-summit-2026-sat",
       "title": "John Summit · CTRL Escape Tour · Saturday",
       "date": "2026-11-21",
@@ -218,6 +235,25 @@
       "window": "Late evening, verify",
       "window_type": "unverified timing",
       "note": "Listed by venue; check start and end times closer to date.",
+      "source": "https://www.kaseyacenter.com/events"
+    },
+    {
+      "id": "heat-thunder-2026",
+      "title": "Miami HEAT vs Oklahoma City Thunder",
+      "date": "2026-11-22",
+      "start": "18:00",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "High",
+      "window": "8:00–9:00 PM",
+      "window_start": "20:00",
+      "window_end": "21:00",
+      "window_type": "rough planning estimate",
+      "note": "Sunday evening game; exit time moves with game length.",
       "source": "https://www.kaseyacenter.com/events"
     },
     {
