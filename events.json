@@ -1,42 +1,7 @@
 {
-  "updated_at": "2026-11-08T07:07:08-05:00",
+  "updated_at": "2026-11-09T07:10:20-05:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "tony-robbins-2026",
-      "title": "Tony Robbins · Unleash the Power Within · Nov 5–8",
-      "date": "2026-11-05",
-      "date_end": "2026-11-08",
-      "start": "",
-      "end": "",
-      "end_verified": false,
-      "category": "Special event",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "Medium",
-      "window": "Multiple daily departures",
-      "window_type": "unverified timing",
-      "note": "Multi-day seminar at the arena; daily session times not published on the venue page. Expect heavy pickups around session breaks and ends.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
-    {
-      "id": "dolphins-lions-2026",
-      "title": "Miami Dolphins vs Detroit Lions",
-      "date": "2026-11-08",
-      "start": "13:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Miami Gardens",
-      "venue": "Hard Rock Stadium",
-      "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
-      "priority": "High",
-      "window": "4:00–5:15 PM",
-      "window_type": "rough planning estimate",
-      "note": "Kickoff may be flexed. Traffic controls are substantial around the stadium.",
-      "source": "https://www.miamidolphins.com/schedule/"
-    },
     {
       "id": "adobe-max-2026",
       "title": "Adobe MAX · Nov 10–12",
