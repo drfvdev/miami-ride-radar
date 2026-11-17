@@ -1,26 +1,7 @@
 {
-  "updated_at": "2026-11-16T07:09:14-05:00",
+  "updated_at": "2026-11-17T07:08:00-05:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "heat-rockets-2026",
-      "title": "Miami HEAT vs Houston Rockets",
-      "date": "2026-11-16",
-      "start": "19:30",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "9:45–10:45 PM",
-      "window_start": "21:45",
-      "window_end": "22:45",
-      "window_type": "rough planning estimate",
-      "note": "Exit time moves with game length.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
     {
       "id": "heat-bucks-2026",
       "title": "Miami HEAT vs Milwaukee Bucks",
@@ -166,6 +147,25 @@
       "window_type": "rough planning estimate",
       "note": "NFL crowd; heavy traffic controls around the stadium.",
       "source": "https://www.hardrockstadium.com/events/"
+    },
+    {
+      "id": "heat-hawks-2026",
+      "title": "Miami HEAT vs Atlanta Hawks",
+      "date": "2026-12-01",
+      "start": "19:30",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "High",
+      "window": "9:45–10:45 PM",
+      "window_start": "21:45",
+      "window_end": "22:45",
+      "window_type": "rough planning estimate",
+      "note": "Tuesday night game; exit time moves with game length.",
+      "source": "https://www.kaseyacenter.com/events"
     },
     {
       "id": "art-basel-2026",
