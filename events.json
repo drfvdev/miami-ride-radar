@@ -1,26 +1,7 @@
 {
-  "updated_at": "2026-11-17T07:08:00-05:00",
+  "updated_at": "2026-11-19T07:08:16-05:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "heat-bucks-2026",
-      "title": "Miami HEAT vs Milwaukee Bucks",
-      "date": "2026-11-18",
-      "start": "19:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "9:15–10:15 PM",
-      "window_start": "21:15",
-      "window_end": "22:15",
-      "window_type": "rough planning estimate",
-      "note": "Exit time moves with game length.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
     {
       "id": "john-summit-2026-fri",
       "title": "John Summit · CTRL Escape Tour · Friday",
@@ -184,6 +165,44 @@
       "window_type": "unverified timing",
       "note": "Citywide gallery and after-party activity. The venue schedule alone does not capture off-site events.",
       "source": "https://www.miamibeachconvention.com/events?page=1"
+    },
+    {
+      "id": "heat-wizards-2026",
+      "title": "Miami HEAT vs Washington Wizards",
+      "date": "2026-12-03",
+      "start": "19:30",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "High",
+      "window": "9:45–11:00 PM",
+      "window_start": "21:45",
+      "window_end": "23:00",
+      "window_type": "rough planning estimate",
+      "note": "Downtown arena crowd; expect Biscayne Blvd congestion after the game.",
+      "source": "https://www.kaseyacenter.com/events"
+    },
+    {
+      "id": "usher-chris-brown-2026-dec3",
+      "title": "Usher & Chris Brown: The R&B Tour",
+      "date": "2026-12-03",
+      "start": "",
+      "end": "",
+      "end_verified": false,
+      "category": "Concert",
+      "area": "Miami Gardens",
+      "venue": "Hard Rock Stadium",
+      "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
+      "priority": "High",
+      "window": "10:30 PM–12:00 AM",
+      "window_start": "22:30",
+      "window_end": "23:59",
+      "window_type": "unverified timing",
+      "note": "Stadium concert; official page lists the date but no start time yet. Also Dec 5. Expect heavy surge at stadium exit.",
+      "source": "https://www.hardrockstadium.com/events/"
     }
   ]
 }
