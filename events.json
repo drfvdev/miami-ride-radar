@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T07:08:16-05:00",
+  "updated_at": "2026-11-20T07:08:44-05:00",
   "timezone": "America/New_York",
   "events": [
     {
@@ -67,12 +67,12 @@
       "venue": "Kaseya Center",
       "address": "601 Biscayne Blvd, Miami, FL 33132",
       "priority": "High",
-      "window": "8:00–9:00 PM",
+      "window": "8:00–9:30 PM",
       "window_start": "20:00",
-      "window_end": "21:00",
+      "window_end": "21:30",
       "window_type": "rough planning estimate",
-      "note": "Sunday evening game; exit time moves with game length.",
-      "source": "https://www.kaseyacenter.com/events"
+      "note": "Doors 4:30 PM. Expect heavy pickups on Biscayne Blvd after the game.",
+      "source": "https://www.nba.com/heat/game/0022600281-thunder-vs-heat-miami-fl-11-22-2026"
     },
     {
       "id": "wild-n-out-2026",
@@ -203,6 +203,24 @@
       "window_type": "unverified timing",
       "note": "Stadium concert; official page lists the date but no start time yet. Also Dec 5. Expect heavy surge at stadium exit.",
       "source": "https://www.hardrockstadium.com/events/"
+    },
+    {
+      "id": "rawayana-2026-dec4",
+      "title": "Rawayana: ¿Dónde Es El After? World Tour",
+      "date": "2026-12-04",
+      "date_end": "2026-12-06",
+      "start": "",
+      "end": "",
+      "end_verified": false,
+      "category": "Concert",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "Medium",
+      "window": "Evening, time TBD",
+      "window_type": "unverified timing",
+      "note": "Multi-night run Dec 4-6 per Kaseya Center calendar; start time not yet published. Expect Biscayne Blvd closures and busy post-show pickups.",
+      "source": "https://www.kaseyacenter.com/events"
     }
   ]
 }
