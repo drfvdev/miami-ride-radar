@@ -1,24 +1,7 @@
 {
-  "updated_at": "2026-11-20T07:08:44-05:00",
+  "updated_at": "2026-11-21T07:06:14-05:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "john-summit-2026-fri",
-      "title": "John Summit · CTRL Escape Tour · Friday",
-      "date": "2026-11-20",
-      "start": "20:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Concert",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "10:30 PM–12:15 AM",
-      "window_type": "rough planning estimate",
-      "note": "Listed start is approximate: confirm exact ticket time closer to date. End time unconfirmed.",
-      "source": "https://www.kaseyacenter.com/events"
-    },
     {
       "id": "john-summit-2026-sat",
       "title": "John Summit · CTRL Escape Tour · Saturday",
@@ -221,6 +204,25 @@
       "window_type": "unverified timing",
       "note": "Multi-night run Dec 4-6 per Kaseya Center calendar; start time not yet published. Expect Biscayne Blvd closures and busy post-show pickups.",
       "source": "https://www.kaseyacenter.com/events"
+    },
+    {
+      "id": "usher-chris-brown-2026-dec5",
+      "title": "Usher & Chris Brown: The R&B Tour (night 2)",
+      "date": "2026-12-05",
+      "start": "",
+      "end": "",
+      "end_verified": false,
+      "category": "Concert",
+      "area": "Miami Gardens",
+      "venue": "Hard Rock Stadium",
+      "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
+      "priority": "High",
+      "window": "10:30 PM–12:00 AM",
+      "window_start": "22:30",
+      "window_end": "23:59",
+      "window_type": "unverified timing",
+      "note": "Second stadium date; official page lists the date but no start time yet. Expect heavy surge at stadium exit.",
+      "source": "https://www.hardrockstadium.com/events/"
     }
   ]
 }
