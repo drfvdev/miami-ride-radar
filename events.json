@@ -1,26 +1,7 @@
 {
-  "updated_at": "2026-11-22T07:06:53-05:00",
+  "updated_at": "2026-11-23T07:07:14-05:00",
   "timezone": "America/New_York",
   "events": [
-    {
-      "id": "heat-thunder-2026",
-      "title": "Miami HEAT vs Oklahoma City Thunder",
-      "date": "2026-11-22",
-      "start": "18:00",
-      "end": "",
-      "end_verified": false,
-      "category": "Sports",
-      "area": "Downtown",
-      "venue": "Kaseya Center",
-      "address": "601 Biscayne Blvd, Miami, FL 33132",
-      "priority": "High",
-      "window": "8:00–9:30 PM",
-      "window_start": "20:00",
-      "window_end": "21:30",
-      "window_type": "rough planning estimate",
-      "note": "Doors 4:30 PM. Expect heavy pickups on Biscayne Blvd after the game.",
-      "source": "https://www.nba.com/heat/game/0022600281-thunder-vs-heat-miami-fl-11-22-2026"
-    },
     {
       "id": "wild-n-out-2026",
       "title": "Nick Cannon Presents: Wild 'N Out Live",
