@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T07:07:20-05:00",
+  "updated_at": "2026-11-25T07:07:02-05:00",
   "timezone": "America/New_York",
   "events": [
     {
@@ -93,6 +93,26 @@
       "window_type": "unverified timing",
       "note": "Citywide gallery and after-party activity. The venue schedule alone does not capture off-site events.",
       "source": "https://www.miamibeachconvention.com/events?page=1"
+    },
+    {
+      "id": "design-miami-2026",
+      "title": "Design Miami · Dec 2–6",
+      "date": "2026-12-02",
+      "date_end": "2026-12-06",
+      "start": "",
+      "end": "",
+      "end_verified": false,
+      "category": "Festival",
+      "area": "Miami Beach",
+      "venue": "Miami Beach Convention Center area (Design District/Miami Beach)",
+      "address": "1901 Convention Center Dr, Miami Beach, FL 33139",
+      "priority": "Medium",
+      "window": "6:00–8:00 PM",
+      "window_start": "18:00",
+      "window_end": "20:00",
+      "window_type": "unverified timing",
+      "note": "Runs alongside Art Basel Miami Beach; expect heavy Miami Beach traffic and convention center drop-offs. Daily hours not confirmed.",
+      "source": "https://www.miamibeachconvention.com/events"
     },
     {
       "id": "heat-wizards-2026",
