@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T07:07:02-05:00",
+  "updated_at": "2026-11-27T07:06:40-05:00",
   "timezone": "America/New_York",
   "events": [
     {
@@ -190,6 +190,25 @@
       "window_type": "unverified timing",
       "note": "Second stadium date; official page lists the date but no start time yet. Expect heavy surge at stadium exit.",
       "source": "https://www.hardrockstadium.com/events/"
+    },
+    {
+      "id": "heat-knicks-2026",
+      "title": "Miami HEAT vs New York Knicks",
+      "date": "2026-12-12",
+      "start": "20:30",
+      "end": "",
+      "end_verified": false,
+      "category": "Sports",
+      "area": "Downtown",
+      "venue": "Kaseya Center",
+      "address": "601 Biscayne Blvd, Miami, FL 33132",
+      "priority": "High",
+      "window": "10:45 PM–11:45 PM",
+      "window_start": "22:45",
+      "window_end": "23:45",
+      "window_type": "rough planning estimate",
+      "note": "Tip-off 8:30 PM. Expect heavy Biscayne Blvd traffic after the game.",
+      "source": "https://www.kaseyacenter.com/events"
     }
   ]
 }
